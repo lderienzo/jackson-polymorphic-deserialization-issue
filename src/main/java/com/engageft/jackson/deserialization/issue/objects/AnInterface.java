@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
-@JsonTypeInfo(use = DEDUCTION)
+@JsonTypeInfo(use = DEDUCTION, defaultImpl = EmptyDefaultImplementation.class)
 @JsonSubTypes({
         @Type(AnImplementation.class),
         @Type(AnotherImplementation.class)
